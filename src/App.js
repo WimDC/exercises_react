@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { NUMBER_DATA } from "./data/data";
+import { Box, Typography } from "@mui/material";
+import { NumbersPage } from "./Pages/NumbersPage";
+import { Numbers } from "./components/Numbers";
 
 function App() {
+  const filteredNumbers = NUMBER_DATA.filter(number => number > 6);
+  const doubleNumbers = NUMBER_DATA.map(number => number * 2);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+        <NumbersPage numbers={NUMBER_DATA} title="alle getallen" />
+        <NumbersPage numbers={filteredNumbers} title="getallen>6" />
+        <NumbersPage numbers={doubleNumbers} title="numbers*2" />
+      </div>
     </div>
   );
 }
