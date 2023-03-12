@@ -11,5 +11,5 @@ export const CarsPage = ({cars, title}) => {
                 {car.color && <p>kleur: {car.color}</p>}
             </div>)}
         </div>
-    )
+    ) 
 }
