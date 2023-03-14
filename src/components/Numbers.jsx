@@ -2,7 +2,7 @@ export const Numbers = ({number, title}) => {
    /* const {number} = props;*/
    
     return(
-        <div>
+        <div onClick={() => {alert(number)}}>
             {number}
         </div>
     )
