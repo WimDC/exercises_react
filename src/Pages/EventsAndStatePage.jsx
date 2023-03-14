@@ -1,4 +1,5 @@
 import { EventDemo } from "../components/EventDemo"
+import { StateDemo } from "../components/StateDemo"
 
 export const EventsAndStatePage = ({title}) => {
     return (
@@ -9,6 +10,7 @@ export const EventsAndStatePage = ({title}) => {
                 <p>Dit is een div.</p>
                 <a href="" onClick={() => alert("link is clicked")}>dit is een link met een href</a>
             </div>
+            <StateDemo />
         </div>
     )
 }
